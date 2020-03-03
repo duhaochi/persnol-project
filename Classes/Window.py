@@ -1,29 +1,24 @@
-from layout.Layout1 import*
-from layout.Layout2 import*
-from layout.Layout3 import*
+from layout1.LayoutManager import*
 from Buttons import*
 
 class Window:
     root = Tk()
-    size = "600x600"
+    size = "1000x1000"
+    lay = 1
 
     screenHeight = root.winfo_screenheight()
     screenWidth = root.winfo_screenwidth()
 
     root.geometry(size)
 
+
     button = Buttons(root)
     button.creatButtons()
     buttonList = button.buttonList
 
+    LM = LayoutManager(root,buttonList)
 
-    #print len(list2)
-    #layout_1 = Layout1(root,buttonList)
-    #layout_2 = Layout2(root,buttonList)
-    #layout_2.placeButton()
-
-    layout_3 = Layout3(root,buttonList)
-    layout_3.placeButton()
+    LM.getLay1()
 
 
     #layout_1.placeButton()

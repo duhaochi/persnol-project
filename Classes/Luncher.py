@@ -1,4 +1,4 @@
-import Window
+from Window import *
 
 class Luncher:
     def main(self):

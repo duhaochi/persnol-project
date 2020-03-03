@@ -1,10 +1,12 @@
 from Tkinter import*
 
 
+
 class Buttons:
     buttonList = []
     root = None
-    size = 44
+    size = 60
+    padding = 5
     font = "Courier"
 
     def __init__(self,root):
@@ -13,10 +15,10 @@ class Buttons:
     def creatButtons(self):
         for i in range(10):
             self.buttonList.append(Button(self.root, text=str(i), borderwidth=5, font=(self.font, self.size),
-                            command=lambda a=i: self.click(i)))
+                            command=lambda a=i: self.click(a)))
 
 
-    def click(num):
-        pass
+    def click(self,num):
+        print num
 
     #creatButtons()
